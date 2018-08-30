@@ -1,0 +1,11 @@
+	STORED PROCEDURE: TO STORE THE DETAILS OF PASSENGER AND HIS RESERVATION DETAILS TOGETHER 
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `new_procedure`()
+
+BEGIN
+
+ Select pnr_no,ticket_id,jny_date,jny_time,f_name,r.src,r.dst from reservation r join flight f on f.f_code=r.f_code
+ where f.f_code=r.f_code; 
+
+
+END
